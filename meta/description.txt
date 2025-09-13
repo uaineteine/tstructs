@@ -1,0 +1,7 @@
+`tstructs` is a Python package providing foundational data structures for representing and manipulating tile maps in both 2D and 3D environments. Designed for use in games, simulations, and applications that require efficient spatial organization of map data, it offers:
+
+- **Coordinate**: Immutable tuple subclass for 2D/3D coordinates with convenient accessors.
+- **Region**: Represents a square 3D region in a tile map, with properties for area, volume, and bounds checking.
+- **ChunkedRegion**: Extends `Region` to support chunking, allowing subdivision of regions into smaller, manageable chunks.
+
+These classes enable efficient handling of spatial data, region subdivision, and coordinate management for tile-based worlds. The package is suitable for developers building systems that require robust map and region logic, such as world editors, procedural generation tools, and simulation engines.
