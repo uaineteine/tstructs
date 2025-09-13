@@ -4,6 +4,20 @@ Tile map data structures for 2D and 3D worlds.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-brightgreen)
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Module Information](#module-information)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+	- [Coordinate](#coordinate)
+	- [Region](#region)
+	- [ChunkedRegion](#chunkedregion)
+- [Testing](#testing)
+- [License](#license)
+
 ## Overview
 `tstructs` is a Python package providing foundational data structures for representing and manipulating tile maps in both 2D and 3D environments. It is designed for use in games, simulations, and applications that require efficient spatial organization of map data.
 
@@ -61,13 +75,7 @@ chunked = ChunkedRegion(region_x=0, region_y=0, region_size=16, chunk_size=4, re
 - Methods: `.get_chunk_coordinates(loc)`, `.get_chunks_in_area(start, end)`
 
 ## Testing
-Each module includes a `__main__` section with example usage and basic tests. You can run them directly:
-
-```bash
-python coord.py
-python region.py
-python chunkedregion.py
-```
+See [docs/testing.md](docs/testing.md) for information on testing and usage examples.
 
 ## License
 This package is licensed under the GNU General Public License v3.0 (GPLv3). See the LICENSE file for details.
