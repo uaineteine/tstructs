@@ -2,3 +2,6 @@ devscripts/key.txt
 tstructs.egg-info/*
 build/*
 dist/*
+docs/__pycache__/*
+docs/build/*
+tstructs/__pycache__/*
