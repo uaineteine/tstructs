@@ -5,3 +5,4 @@ dist/*
 docs/__pycache__/*
 docs/build/*
 tstructs/__pycache__/*
+docs/source/index.rst

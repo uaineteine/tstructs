@@ -31,7 +31,12 @@ def build_package():
     subprocess.check_call(['python', 'setup.py', 'sdist', 'bdist_wheel'])
 
 def build_docs():
-    subprocess.check_call(['cmd', '/c', BUILDDOCS_BAT], cwd=DOCS_DIR)
+    prev_cwd = os.getcwd()
+    try:
+        os.chdir(DOCS_DIR)
+        subprocess.check_call(['cmd', '/c', 'builddocs.bat'])
+    finally:
+        os.chdir(prev_cwd)
 
 def main():
     current_version = read_current_version()
