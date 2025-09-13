@@ -2,7 +2,7 @@
 
 Tile map data structures for 2D and 3D worlds.
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-brightgreen)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![Version 1.0.0.1](https://img.shields.io/badge/version-1.0.0.1-brightgreen)
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ Tile map data structures for 2D and 3D worlds.
 
 ## Module Information
 - **Name**: tstructs
-- **Version**: 1.0.0
+- **Version**: 1.0.0.1
 - **Description**: Tile map data structures for 2D and 3D worlds.
 
 ## Installation
