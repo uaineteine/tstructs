@@ -24,8 +24,14 @@ Description
    :maxdepth: 2
    :caption: Contents:
 
-<automodule>
-</automodule>
+.. automodule:: tstructs.coord
+   :members:
+
+.. automodule:: tstructs.chunkedregion
+   :members:
+
+.. automodule:: tstructs.region
+   :members:
 
 Release History
 =========================

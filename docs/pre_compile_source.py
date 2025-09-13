@@ -15,26 +15,14 @@ modules = [m for m in modules if m != "__init__"]
 # Sort these modules out in alphabetical order
 modules = sorted(modules)
 
-print("Python modules identified in the directory: " + relative_directory)
-for file in modules:
-    print(file)
-
-#make auto modules
-def rst_text(module_name):
-    rst = module_name + "\n=========================" + "\n"
-    return rst + "\n.. automodule:: " + module_name + "\n   :members:" + "\n"
-rst_lines = list(map(rst_text, modules))
-#print(rst_lines)
-
 #open pre-compile file and edit lines
 pre_compile_path = "source/index.rst_pre"
 pre_str = fileio.read_file_to_string(pre_compile_path)
-post_str = datatransform.replace_between_tags(pre_str, "automodule", rst_lines, deleteTags=True)
 
 purpose_path = "../meta/purpose.txt"
 pur = fileio.read_file_to_string(purpose_path)
 pur = datatransform.break_into_lines(pur)
-post_str = datatransform.replace_between_tags(post_str, "purpose", pur, deleteTags=True)
+post_str = datatransform.replace_between_tags(pre_str, "purpose", pur, deleteTags=True)
 
 #add in changelog
 changelog_path = "../meta/changelog.txt"
