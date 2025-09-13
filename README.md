@@ -32,7 +32,7 @@ Tile map data structures for 2D and 3D worlds.
 - **Description**: Tile map data structures for 2D and 3D worlds.
 
 ## Installation
-This package is intended for use as part of a larger project. To use it directly, add the `foundation_packages/tstructs/tstructs` directory to your Python path or install it as a package.
+This package is intended for use as part of a larger project. To use it directly or install it as a package.
 
 ```basg
 # Example pip install
@@ -41,7 +41,7 @@ pip install tstructs
 
 ```bash
 # Example: Add to PYTHONPATH
-export PYTHONPATH="$PYTHONPATH:/path/to/foundation_packages/tstructs"
+export PYTHONPATH="$PYTHONPATH:/path/to/install/tstructs"
 ```
 
 ## Usage
