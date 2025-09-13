@@ -1,2 +1,4 @@
 devscripts/key.txt
 tstructs.egg-info/*
+build/*
+dist/*
