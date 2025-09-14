@@ -1,4 +1,4 @@
-from properties import CellProperties, CellProperty
+from .properties import CellProperties, CellProperty
 
 class Cell:
     def __init__(self, type:int, name:str, group:int, properties:CellProperties=None):
