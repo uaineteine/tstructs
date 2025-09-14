@@ -33,6 +33,15 @@ Description
 .. automodule:: tstructs.region
    :members:
 
+.. automodule:: tstructs.group
+   :members:
+
+.. automodule:: tstructs.properties
+   :members:
+
+.. automodule:: tstructs.cell
+   :members:
+
 Release History
 =========================
 
