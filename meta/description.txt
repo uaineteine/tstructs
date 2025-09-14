@@ -3,5 +3,8 @@
 - **Coordinate**: Immutable tuple subclass for 2D/3D coordinates with convenient accessors.
 - **Region**: Represents a square 3D region in a tile map, with properties for area, volume, and bounds checking.
 - **ChunkedRegion**: Extends `Region` to support chunking, allowing subdivision of regions into smaller, manageable chunks.
+- **Cell**: Represents a single tile or cell in a map, with a coordinate, value, and optional attributes.
+- **Group**: A collection of `Cell` objects, supporting group operations and queries.
+- **Properties**: Dictionary-like class for storing arbitrary properties for tiles, cells, or regions.
 
-These classes enable efficient handling of spatial data, region subdivision, and coordinate management for tile-based worlds. The package is suitable for developers building systems that require robust map and region logic, such as world editors, procedural generation tools, and simulation engines.
+These classes enable efficient handling of spatial data, region subdivision, cell grouping, property management, and coordinate management for tile-based worlds. The package is suitable for developers building systems that require robust map and region logic, such as world editors, procedural generation tools, and simulation engines.
