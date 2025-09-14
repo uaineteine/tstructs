@@ -1,3 +1,11 @@
+Version 1.1.1
+^^^^^^^^^^^^^
+* Cell structure types created
+
+Version 1.0.1.1
+^^^^^^^^^^^^^
+* Metadata update in package build
+
 Version 1.0.0
 ^^^^^^^^^^^^^
 
