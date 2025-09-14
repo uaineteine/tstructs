@@ -15,6 +15,9 @@ Tile map data structures for 2D and 3D worlds.
 	- [Coordinate](#coordinate)
 	- [Region](#region)
 	- [ChunkedRegion](#chunkedregion)
+	- [Cell](#cell)
+	- [Group](#group)
+	- [Properties](#properties)
 - [Testing](#testing)
 - [License](#license)
 
@@ -48,7 +51,7 @@ export PYTHONPATH="$PYTHONPATH:/path/to/install/tstructs"
 Import the classes you need:
 
 ```python
-from tstructs import Coordinate, Region, ChunkedRegion
+from tstructs import Coordinate, Region, ChunkedRegion, Cell, Group, Properties
 
 # 2D coordinate
 c2 = Coordinate(1, 2)
@@ -61,6 +64,16 @@ region = Region(region_x=0, region_y=0, region_size=16, region_location=Coordina
 
 # Create a chunked region
 chunked = ChunkedRegion(region_x=0, region_y=0, region_size=16, chunk_size=4, region_location=Coordinate(0, 0))
+
+# Create a cell
+cell = Cell(coord=Coordinate(1, 2), value=5)
+
+# Create a group of cells
+group = Group([cell])
+
+# Create and use properties
+props = Properties({'walkable': True, 'cost': 1})
+is_walkable = props['walkable']
 ```
 
 ## API Reference
@@ -78,6 +91,27 @@ chunked = ChunkedRegion(region_x=0, region_y=0, region_size=16, chunk_size=4, re
 - `ChunkedRegion(region_x, region_y, region_size, chunk_size, region_location=Coordinate(0,0))`
 - Properties: `.chunks_per_side`, `.total_chunks`
 - Methods: `.get_chunk_coordinates(loc)`, `.get_chunks_in_area(start, end)`
+
+### Cell
+- `Cell(coord, value=None, **attributes)`
+- Represents a single tile or cell in a map, with a coordinate and optional value/attributes.
+- Properties: `.coord`, `.value`, `.attributes` (dict of extra attributes)
+- Example: `Cell(Coordinate(1,2), value=5, terrain='grass')`
+
+### Group
+- `Group(cells=None)`
+- Represents a collection of `Cell` objects.
+- Methods:
+	- `.add(cell)`: Add a cell to the group
+	- `.remove(cell)`: Remove a cell from the group
+	- `.find_by_coord(coord)`: Find a cell by its coordinate
+- Iterable: Can be iterated over like a list of cells
+
+### Properties
+- `Properties(data=None)`
+- Dictionary-like class for storing arbitrary properties for tiles, cells, or regions.
+- Behaves like a dict: supports item access, update, iteration, etc.
+- Example: `Properties({'walkable': True, 'cost': 1})`
 
 ## Testing
 See [docs/testing.md](docs/testing.md) for information on testing and usage examples.
