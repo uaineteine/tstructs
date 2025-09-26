@@ -60,10 +60,10 @@ c2 = Coordinate(1, 2)
 c3 = Coordinate(1, 2, 3)
 
 # Create a region
-region = Region(region_x=0, region_y=0, region_size=16, region_location=Coordinate(0, 0))
+region = Region(region_size=16, region_location=Coordinate(0, 0))
 
 # Create a chunked region
-chunked = ChunkedRegion(region_x=0, region_y=0, region_size=16, chunk_size=4, region_location=Coordinate(0, 0))
+chunked = ChunkedRegion(region_size=16, chunk_size=4, region_location=Coordinate(0, 0))
 
 # Create a cell
 cell = Cell(coord=Coordinate(1, 2), value=5)
@@ -83,12 +83,12 @@ is_walkable = props['walkable']
 - Properties: `.x`, `.y`, `.z` (z only for 3D)
 
 ### Region
-- `Region(region_x, region_y, region_size, region_location=Coordinate(0,0))`
+- `Region(region_size, region_location=Coordinate(0,0))`
 - Properties: `.name`, `.n` (size), `.area`, `.volume`, `.centre`
 - Methods: `.clamp_coordinates(start_x, start_y, end_x, end_y)`, `.is_edge(x, y)`
 
 ### ChunkedRegion
-- `ChunkedRegion(region_x, region_y, region_size, chunk_size, region_location=Coordinate(0,0))`
+- `ChunkedRegion(region_size, chunk_size, region_location=Coordinate(0,0))`
 - Properties: `.chunks_per_side`, `.total_chunks`
 - Methods: `.get_chunk_coordinates(loc)`, `.get_chunks_in_area(start, end)`
 
