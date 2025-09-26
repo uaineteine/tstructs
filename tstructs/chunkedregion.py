@@ -6,14 +6,10 @@ class ChunkedRegion(Region):
     A subclass of Region that represents a chunked region.
     Each chunk is of size chunk_size x chunk_size.
     """
-    def __init__(self, region_x: int, region_y: int, region_size: int, chunk_size: int, region_location:Coordinate=(0,0)):
+    def __init__(self, region_size: int, chunk_size: int, region_location:Coordinate=(0,0)):
         """
         Initialize a ChunkedRegion object.
 
-        :param region_x: The x-coordinate of the region in the tile map grid.
-        :type region_x: int
-        :param region_y: The y-coordinate of the region in the tile map grid.
-        :type region_y: int
         :param region_size: The size (width, length, height) of the region. Must be positive.
         :type region_size: int
         :param chunk_size: The size of each chunk within the region. Must be positive and divide region_size evenly.
@@ -22,7 +18,7 @@ class ChunkedRegion(Region):
         :type region_location: Coordinate or tuple[int, int]
         :raises ValueError: If chunk_size is not a positive integer or does not divide region_size evenly.
         """
-        super().__init__(region_x, region_y, region_size, region_location)
+        super().__init__(region_size, region_location=region_location)
         self.chunk_size = chunk_size
 
         # error check
@@ -78,11 +74,10 @@ if __name__ == "__main__":
 
     # Basic test for ChunkedRegion
     print("Testing ChunkedRegion...")
-    region_x, region_y = 0, 0
     region_size = 16
     chunk_size = 4
     region_location = Coordinate(0, 0)
-    cr = ChunkedRegion(region_x, region_y, region_size, chunk_size, region_location)
+    cr = ChunkedRegion(region_size, chunk_size, region_location=region_location)
     print(f"Chunks per side: {cr.chunks_per_side}")
     print(f"Total chunks: {cr.total_chunks}")
 

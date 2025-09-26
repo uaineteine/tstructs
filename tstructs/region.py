@@ -5,22 +5,16 @@ class Region:
     A class representing a 3D region in a tile map.
     Width, length and height are all the same and defined by region_size.
     """
-    def __init__(self, region_x: int, region_y: int, region_size: int, region_location:Coordinate=(0,0)):
+    def __init__(self, region_size: int, region_location:Coordinate=(0,0)):
         """
         Initialize a Region object.
 
-        :param region_x: The x-coordinate of the region in the tile map grid.
-        :type region_x: int
-        :param region_y: The y-coordinate of the region in the tile map grid.
-        :type region_y: int
         :param region_size: The size (width, length, height) of the region. Must be positive.
         :type region_size: int
         :param region_location: The coordinate location of the region (default is (0, 0)).
         :type region_location: Coordinate or tuple[int, int]
         :raises ValueError: If region_size is not a positive integer.
         """
-        self.region_x = region_x
-        self.region_y = region_y
 
         self.region_size = region_size
         self.region_location = region_location
@@ -128,15 +122,13 @@ if __name__ == "__main__":
     print("Testing module region.py")
 
     # Example usage and test code for Region
-    from coord import Coordinate
     # Create a Region instance
-    region = Region(region_x=1, region_y=2, region_size=16, region_location=Coordinate(10, 20))
+    region = Region(region_size=16, region_location=Coordinate(10, 20))
     print("Region name:", region.name)
     print("Region n (size):", region.n)
     print("Region area:", region.area)
     print("Region volume:", region.volume)
     print("Region location:", region.region_location)
-    print("Region x, y:", region.region_x, region.region_y)
     # Test clamping
     clamped = region.clamp_coordinates(-5, 5, 20, 25)
     print("Clamped coordinates:", clamped)
